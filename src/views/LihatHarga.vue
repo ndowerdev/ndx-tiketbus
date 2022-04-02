@@ -5,11 +5,7 @@
         Tiket Bus dan Travel {{ ticketList.src_city.toUpperCase() }} ke
         {{ ticketList.dst_city.toUpperCase() }}
       </h4>
-      <article
-        class="leaderboard__profile"
-        v-for="(item, key) in ticketList.ticket"
-        :key="key"
-      >
+      <article class="leaderboard__profile" v-for="(item, key) in ticketList.ticket" :key="key">
         <img
           :src="'https://s2.rdbuz.com/buslogos/country/' + item.operatorImg"
           :alt="'Harga tiketbus di ' + item.name"
@@ -35,15 +31,17 @@
         <small>
           Bus dan atau Travel
           <strong>{{ ticketList.src_city.toUpperCase() }}</strong> ke
-          <strong>{{ ticketList.dst_city.toUpperCase() }}</strong> pertama kali
+          <strong>{{ ticketList.dst_city.toUpperCase() }}</strong>
+          pertama kali
           berangkat pada pukul {{ info.earlier_bus }} dan terakhir berangkat
-          pada jam <strong>{{ info.latest_bus }}</strong
-          >. Jarak dari
+          pada jam
+          <strong>{{ info.latest_bus }}</strong>. Jarak dari
           <strong>{{ ticketList.src_city.toUpperCase() }}</strong> ke
           <strong>{{ ticketList.dst_city.toUpperCase() }}</strong> yaitu sekitar
-          kurang lebih <strong>{{ info.distance.toUpperCase() }}</strong> dan
+          kurang lebih
+          <strong>{{ info.distance.toUpperCase() }}</strong> dan
           dapat ditempuh dalam
-          <strong>{{ info.avg_bus_duration }} </strong>
+          <strong>{{ info.avg_bus_duration }}</strong>
         </small>
       </div>
       <button class="back-button" @click="$router.go(-1)">KEMBALI</button>
@@ -77,7 +75,10 @@ export default {
   methods: {
     getTiketByRute: function () {
       this.$http
-        .get("https://tiketbus.api-warehouse.xyz/getTicketsByRoute/" + this.ruteName)
+        .get(
+          "https://tiketbus.api-warehouse.xyz/getTicketsByRoute/" +
+            this.ruteName
+        )
         .then((r) => {
           let x = r.data.data;
           if (this.$func.isBase64(x)) {
@@ -93,7 +94,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 .info {
   display: flex;
   flex-direction: column;

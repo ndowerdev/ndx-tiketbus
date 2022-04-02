@@ -7,7 +7,7 @@ import VueAxios from 'vue-axios'
 import router from './router'
 
 import './registerServiceWorker'
-import { func } from './functions/decode.js'
+import { func } from './decode.js'
 
 
 

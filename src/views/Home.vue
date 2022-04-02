@@ -98,7 +98,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 ul {
   text-align: center;
   list-style: none;

@@ -3,11 +3,7 @@
     <main class="leaderboard__profiles" v-if="routeLists != null">
       <!-- <rise-loader :loading="isLoading" size="30px" /> -->
       <h3>Operator Bus / Travel</h3>
-      <article
-        class="leaderboard__profile"
-        v-for="item in routeLists.operators"
-        :key="item.id"
-      >
+      <article class="leaderboard__profile" v-for="item in routeLists.operators" :key="item.id">
         <img
           src="https://lh3.googleusercontent.com/-A9IoCFcFLmk/YOlWBkaCaUI/AAAAAAAAJ6E/dp7DMaGg_1wJEkTShOidxAOBxkbjOXj6QCLcBGAsYHQ/city-nature-svgrepo-com.png"
           class="leaderboard__picture"
@@ -16,7 +12,8 @@
         <span class="leaderboard__value"></span>
       </article>
       <h3 v-if="routeLists.from.length">
-        Dari <span>{{ realLocBySlug }}</span>
+        Dari
+        <span>{{ realLocBySlug }}</span>
       </h3>
       <article
         class="leaderboard__profile"
@@ -33,7 +30,8 @@
         <span class="leaderboard__value">LIhat Harga</span>
       </article>
       <h3 v-if="routeLists.to.length">
-        Ke <span>{{ realLocBySlug }}</span>
+        Ke
+        <span>{{ realLocBySlug }}</span>
       </h3>
       <article
         class="leaderboard__profile"
@@ -106,7 +104,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 .leaderboard__name {
   font-size: 15px !important;
 }
