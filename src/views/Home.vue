@@ -82,7 +82,7 @@ export default {
     },
     fetchData: function () {
       this.axios
-        .get("https://tiketbus.api-warehouse.xyz/" + "getAllCityList")
+        .get("https://tiketbus.rendrian.dev/" + "getAllCityList")
         .then((r) => {
           let x = r.data.data;
           if (this.$func.isBase64(x)) {

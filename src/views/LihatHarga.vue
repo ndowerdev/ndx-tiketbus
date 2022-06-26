@@ -76,7 +76,7 @@ export default {
     getTiketByRute: function () {
       this.$http
         .get(
-          "https://tiketbus.api-warehouse.xyz/getTicketsByRoute/" +
+          "https://tiketbus.rendrian.dev/getTicketsByRoute/" +
             this.ruteName
         )
         .then((r) => {

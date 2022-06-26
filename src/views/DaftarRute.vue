@@ -87,7 +87,7 @@ export default {
     getData: function () {
       this.$http
         .get(
-          "https://tiketbus.api-warehouse.xyz/getRouteByCity/" + this.cityName
+          "https://tiketbus.rendrian.dev/getRouteByCity/" + this.cityName
         )
         .then((r) => {
           let x = r.data.data;
