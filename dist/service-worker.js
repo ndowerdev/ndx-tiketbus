@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.26031ae29ef0ccb3d746104b04e4fd97.js"
+  "/precache-manifest.830dcc190eb546203393d67408efedef.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tiketbus"});
